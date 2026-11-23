@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZonaTech | La tecnología que transforma tu mundo</title>
+  <link rel="icon" type="image/png" href="assets/images/logo_zonatech.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="announcement-bar">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div class="d-flex align-items-center">
+          <span class="accent-pill"><i class="bi bi-lightning-fill"></i> FLASH</span>
+          <span>Envíos gratis en compras superiores a $150 USD | Garantía oficial de 2 años</span>
+        </div>
+        <div class="d-none d-md-flex align-items-center gap-3">
+          <a href="#beneficios"><i class="bi bi-shield-check me-1"></i> Garantía Oficial</a>
+          <span>|</span>
+          <a href="#contacto"><i class="bi bi-headset me-1"></i> Soporte 24/7</a>
+          <span>|</span>
+          <span class="text-white-50"><i class="bi bi-globe me-1"></i> COP ($) / USD</span>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-navbar py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+
+        <a class="navbar-brand m-0 d-flex align-items-center gap-2" href="#">
+          <img src="assets/images/logo_zonatech.png" alt="ZonaTech Logo" class="brand-logo-img">
+          <span>ZONA<span class="brand-dot">TECH</span></span>
+        </a>
+
+        <button class="action-btn" type="button" onclick="openCartDrawer()" aria-label="Ver carrito de compras">
+          <i class="bi bi-cart3 fs-5" style="color: var(--zt-turquesa);"></i>
+          <span class="d-none d-md-inline ms-1 me-2 fw-semibold">Carrito</span>
+          <span class="cart-amount d-none d-md-inline" id="cart-total-amount">$379 USD</span>
+          <span id="cart-badge-count" class="action-badge">1</span>
+        </button>
+
+      </div>
+    </nav>
+
+    <div class="categories-nav">
+      <div class="container d-flex align-items-center justify-content-between overflow-x-auto py-1">
+        <div class="d-flex align-items-center gap-1">
+          <a href="#categorias" class="nav-link active"><i class="bi bi-grid-fill me-1"></i> Categorías</a>
+          <a href="#productos" class="nav-link"><i class="bi bi-laptop me-1"></i> Computadores</a>
+          <a href="#productos" class="nav-link"><i class="bi bi-phone me-1"></i> Celulares</a>
+          <a href="#productos" class="nav-link"><i class="bi bi-headphones me-1"></i> Audio & Sonido</a>
+          <a href="#productos" class="nav-link"><i class="bi bi-keyboard me-1"></i> Periféricos</a>
+          <a href="#productos" class="nav-link"><i class="bi bi-gpu-card me-1"></i> Componentes PC</a>
+          <a href="#ofertas" class="nav-link offer-link"><i class="bi bi-fire me-1 text-danger"></i> Ofertas Flash</a>
+        </div>
+        <div class="d-none d-lg-block">
+          <span class="badge-soft-turquesa"><i class="bi bi-patch-check-fill me-1"></i> Distribuidor Oficial</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <div class="hero-subtitle-tag">
+              <i class="bi bi-stars" style="color: var(--zt-turquesa);"></i>
+              <span>Nueva Colección Tecnológica 2026</span>
+            </div>
+
+            <h1 class="hero-title">
+              La tecnología que <span class="highlight-tech">transforma</span> tu mundo
+            </h1>
+
+            <p class="hero-description">
+              Explora dispositivos de última generación diseñados para potenciar tu productividad, creatividad y entretenimiento. Rendimiento extremo con el respaldo y garantía que te mereces.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 align-items-center">
+              <a href="#productos" class="btn-turquesa">
+                <i class="bi bi-bag-check-fill"></i> Explorar productos
+              </a>
+              <a href="#ofertas" class="btn-outline-negro">
+                <i class="bi bi-lightning-charge-fill me-1" style="color: var(--zt-turquesa);"></i> Ver Ofertas Especiales
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h4>+15.000</h4>
+                <p>Clientes satisfechos</p>
+              </div>
+              <div class="stat-item">
+                <h4>24 Horas</h4>
+                <p>Despacho garantizado</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Marcas originales</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="hero-visual-card">
+
+              <div class="floating-card-1">
+                <div class="rounded-circle p-2 d-flex align-items-center justify-content-center" style="background-color: var(--zt-turquesa); width: 38px; height: 38px;">
+                  <i class="bi bi-cpu text-white fs-5"></i>
+                </div>
+                <div>
+                  <strong class="d-block text-white" style="font-size: 0.85rem;">Next-Gen Hardware</strong>
+                  <span class="small text-white-50">Apple M3 Pro & Core Ultra</span>
+                </div>
+              </div>
+
+              <div class="hero-img-frame">
+                <img src="assets/images/hero-macbook.avif" 
+                     alt="MacBook Pro de alta gama" 
+                     class="hero-main-img img-fluid">
+              </div>
+
+              <div class="floating-card-2">
+                <div class="rounded-circle p-2 d-flex align-items-center justify-content-center" style="background-color: rgba(0, 184, 176, 0.15); width: 38px; height: 38px;">
+                  <i class="bi bi-shield-fill-check fs-5" style="color: var(--zt-turquesa);"></i>
+                </div>
+                <div>
+                  <strong class="d-block" style="font-size: 0.85rem;">2 Años de Garantía</strong>
+                  <span class="small text-muted"><i class="bi bi-star-fill text-warning me-1"></i>4.9 / 5.0 Rating</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="benefits-section">
+      <div class="container">
+        <div class="row g-3">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit-card">
+              <div class="benefit-icon-wrapper">
+                <i class="bi bi-truck"></i>
+              </div>
+              <div>
+                <h5>Envío Seguro & Rápido</h5>
+                <p>Entrega asegurada en 24/48h a todo el país.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit-card">
+              <div class="benefit-icon-wrapper">
+                <i class="bi bi-patch-check"></i>
+              </div>
+              <div>
+                <h5>Garantía Oficial</h5>
+                <p>2 años de soporte y garantía de fábrica.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit-card">
+              <div class="benefit-icon-wrapper">
+                <i class="bi bi-credit-card-2-front"></i>
+              </div>
+              <div>
+                <h5>Pagos Flexibles</h5>
+                <p>Hasta 12 cuotas sin interés y medios seguros.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="benefit-card">
+              <div class="benefit-icon-wrapper">
+                <i class="bi bi-headset"></i>
+              </div>
+              <div>
+                <h5>Atención Experta 24/7</h5>
+                <p>Asesoría personalizada por especialistas.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias" class="section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-subtitle">Catálogo Especializado</span>
+          <h2 class="section-title">Explora por Categoría</h2>
+          <p class="text-muted mx-auto" style="max-width: 580px;">
+            Selecciona la categoría de tu interés y encuentra componentes, dispositivos inteligentes y periféricos con la más alta calificación del mercado.
+          </p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="category-card" onclick="setCategoryFilter('laptops')">
+              <div class="category-img-box">
+                <img src="assets/images/hero-macbook.avif" alt="Laptops y Computadores" class="category-img">
+              </div>
+              <h4 class="category-title">Computadores</h4>
+              <span class="category-count">128 modelos</span>
+              <span class="category-action-link">Ver catálogo <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="category-card" onclick="setCategoryFilter('smartphones')">
+              <div class="category-img-box">
+                <img src="assets/images/smartphone-galaxy.avif" alt="Celulares y Smartphones" class="category-img">
+              </div>
+              <h4 class="category-title">Celulares</h4>
+              <span class="category-count">94 modelos</span>
+              <span class="category-action-link">Ver catálogo <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="category-card" onclick="setCategoryFilter('perifericos')">
+              <div class="category-img-box">
+                <img src="assets/images/teclado-keychron.avif" alt="Periféricos y Teclados" class="category-img">
+              </div>
+              <h4 class="category-title">Periféricos</h4>
+              <span class="category-count">210 modelos</span>
+              <span class="category-action-link">Ver catálogo <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="category-card" onclick="setCategoryFilter('audio')">
+              <div class="category-img-box">
+                <img src="assets/images/audio-sony.avif" alt="Audio y Auriculares" class="category-img">
+              </div>
+              <h4 class="category-title">Audio & Sonido</h4>
+              <span class="category-count">85 modelos</span>
+              <span class="category-action-link">Ver catálogo <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="category-card" onclick="setCategoryFilter('componentes')">
+              <div class="category-img-box">
+                <img src="assets/images/gpu-nvidia-rtx.avif" alt="Componentes de PC" class="category-img">
+              </div>
+              <h4 class="category-title">Componentes PC</h4>
+              <span class="category-count">165 modelos</span>
+              <span class="category-action-link">Ver catálogo <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="category-card" onclick="setCategoryFilter('smartphones')">
+              <div class="category-img-box">
+                <img src="assets/images/smart-watch.avif" alt="Dispositivos Inteligentes" class="category-img">
+              </div>
+              <h4 class="category-title">Smart Devices</h4>
+              <span class="category-count">72 modelos</span>
+              <span class="category-action-link">Ver catálogo <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="ofertas" class="flash-deals-section pt-0">
+      <div class="container">
+        <div class="flash-deals-box">
+          <div class="row align-items-center">
+
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+              <div class="d-inline-flex align-items-center gap-2 mb-3">
+                <span class="badge-turquesa"><i class="bi bi-lightning-fill"></i> OFERTA RELÁMPAGO</span>
+                <span class="text-white-50 small">Válido hasta agotar existencias</span>
+              </div>
+
+              <h2 class="text-white fw-bold mb-3" style="font-family: var(--zt-font-heading); font-size: 2.3rem; color: #ffffff !important;">
+                MacBook Pro M3 Max + Hub 10 en 1 con <span style="color: var(--zt-turquesa);">35% OFF</span>
+              </h2>
+
+              <p class="text-white-50 mb-4" style="color: rgba(242, 235, 217, 0.75) !important;">
+                Lleva la máxima potencia de renderizado 3D y edición 8K. Incluye docking station Thunderbolt 4 y 2 años de garantía AppleCare extendida sin costo adicional.
+              </p>
+
+              <div class="countdown-wrapper">
+                <div class="countdown-unit">
+                  <span id="deal-hours" class="countdown-num">08</span>
+                  <span class="countdown-label">Horas</span>
+                </div>
+                <div class="countdown-unit">
+                  <span id="deal-minutes" class="countdown-num">42</span>
+                  <span class="countdown-label">Minutos</span>
+                </div>
+                <div class="countdown-unit">
+                  <span id="deal-seconds" class="countdown-num">15</span>
+                  <span class="countdown-label">Segundos</span>
+                </div>
+              </div>
+
+              <div class="deal-progress-bar-wrap">
+                <div class="d-flex justify-content-between text-white-50 small mb-2">
+                  <span>¡Quedan pocas unidades!</span>
+                  <strong class="text-white" style="color: #ffffff !important;">Solo 6 en stock</strong>
+                </div>
+                <div class="deal-progress-track">
+                  <div class="deal-progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="d-flex flex-wrap gap-3 align-items-center">
+                <button class="btn-turquesa px-4 py-3" onclick="addToCart(1)">
+                  <i class="bi bi-cart-plus-fill fs-5"></i> Comprar ahora con 35% de descuento
+                </button>
+                <div class="text-start">
+                  <div class="text-decoration-line-through text-white-50 small" style="color: rgba(242, 235, 217, 0.6) !important;">$3.699 USD</div>
+                  <div class="fs-4 fw-bold" style="color: var(--zt-turquesa); font-family: var(--zt-font-heading);">$2.404 USD</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="deal-product-showcase">
+                <div class="deal-floating-badge">
+                  <span style="font-size: 0.75rem;">AHORRA</span>
+                  <span style="font-size: 1.25rem;">-35%</span>
+                </div>
+                <div class="deal-img-frame">
+                  <img src="assets/images/hero-macbook.avif" 
+                       alt="Oferta Especial MacBook Pro" 
+                       class="deal-img img-fluid">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="section-padding bg-white border-top border-bottom" style="border-color: var(--zt-marfil-dark) !important;">
+      <div class="container">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+          <div>
+            <span class="section-subtitle">Lo más buscado</span>
+            <h2 class="section-title mb-0">Productos Destacados</h2>
+          </div>
+          <p class="text-muted mt-2 mt-md-0 mb-0">Dispositivos testeados con garantía oficial e inmediata</p>
+        </div>
+
+        <div class="product-tabs-wrapper">
+          <button class="product-tab-btn active" data-filter="all">Todos los productos</button>
+          <button class="product-tab-btn" data-filter="laptops"><i class="bi bi-laptop me-1"></i> Portátiles</button>
+          <button class="product-tab-btn" data-filter="smartphones"><i class="bi bi-phone me-1"></i> Smartphones & Tablets</button>
+          <button class="product-tab-btn" data-filter="audio"><i class="bi bi-headphones me-1"></i> Audio Pro</button>
+          <button class="product-tab-btn" data-filter="perifericos"><i class="bi bi-keyboard me-1"></i> Periféricos</button>
+          <button class="product-tab-btn" data-filter="componentes"><i class="bi bi-cpu me-1"></i> Componentes PC</button>
+        </div>
+
+        <div id="featured-products-grid" class="row g-4">
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="brands-section">
+      <div class="container">
+        <div class="text-center mb-3">
+          <span class="text-uppercase small fw-bold text-muted" style="letter-spacing: 0.1em;">
+            Distribuidores Autorizados de las Mejores Marcas Mundiales
+          </span>
+        </div>
+        <div class="row g-3 justify-content-center">
+          <div class="col-4 col-sm-3 col-md-2">
+            <div class="brand-pill"><i class="bi bi-apple fs-4"></i> Apple</div>
+          </div>
+          <div class="col-4 col-sm-3 col-md-2">
+            <div class="brand-pill">SAMSUNG</div>
+          </div>
+          <div class="col-4 col-sm-3 col-md-2">
+            <div class="brand-pill">ASUS ROG</div>
+          </div>
+          <div class="col-4 col-sm-3 col-md-2">
+            <div class="brand-pill">SONY</div>
+          </div>
+          <div class="col-4 col-sm-3 col-md-2">
+            <div class="brand-pill">NVIDIA</div>
+          </div>
+          <div class="col-4 col-sm-3 col-md-2">
+            <div class="brand-pill">LOGITECH</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contacto" class="main-footer">
+    <div class="container">
+      <div class="row g-4 justify-content-between">
+
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="footer-brand-title d-flex align-items-center gap-2">
+            <img src="assets/images/logo_zonatech.png" alt="ZonaTech Logo" class="footer-logo-img">
+            <span>ZONA<span style="color: var(--zt-turquesa);">TECH</span></span>
+          </div>
+
+          <p class="footer-desc">
+            ZonaTech es la tienda líder en tecnología de alto rendimiento. Acercamos la innovación de los mejores fabricantes globales con envíos garantizados, asesoría técnica experta y soporte postventa integral.
+          </p>
+
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill footer-contact-icon"></i>
+            <span>Av. Tecnológica 1024, Edificio Titanium Hub, Piso 8</span>
+          </div>
+
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill footer-contact-icon"></i>
+            <span>+57 (601) 800-ZONATECH | +57 310 987 6543</span>
+          </div>
+
+          <div class="footer-contact-item mb-0">
+            <i class="bi bi-envelope-fill footer-contact-icon"></i>
+            <span>soporte@zonatech.com | ventas@zonatech.com</span>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-5">
+          <h4 class="footer-heading">Compra 100% Segura</h4>
+          <p class="text-white-50 small mb-3">
+            Tus transacciones están encriptadas con protocolos bancarios SSL de 256 bits y certificaciones de autenticidad de hardware.
+          </p>
+
+          <div class="p-3 rounded-3 mb-3" style="background-color: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <i class="bi bi-shield-lock-fill fs-4" style="color: var(--zt-turquesa);"></i>
+              <strong class="text-light small">Transacción Protegida</strong>
+            </div>
+            <span class="text-white-50" style="font-size: 0.75rem;">Soporte antifraude y garantía de reembolso inmediato.</span>
+          </div>
+
+          <h5 class="text-white small fw-bold text-uppercase mb-2">Medios de Pago:</h5>
+          <div class="payment-badges-wrap">
+            <span class="payment-badge"><i class="bi bi-credit-card-fill text-turquesa"></i> Visa</span>
+            <span class="payment-badge"><i class="bi bi-credit-card text-turquesa"></i> Mastercard</span>
+            <span class="payment-badge"><i class="bi bi-paypal text-turquesa"></i> PayPal</span>
+            <span class="payment-badge"><i class="bi bi-apple text-turquesa"></i> Apple Pay</span>
+            <span class="payment-badge"><i class="bi bi-cash-stack text-turquesa"></i> PSE</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          © 2026 <strong>ZonaTech Inc.</strong> Todos los derechos reservados. Diseñado bajo la directriz cromática 60-30-10.
+        </div>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-muted hover-turquesa">Términos del Servicio</a>
+          <span>⬢</span>
+          <a href="#" class="text-muted hover-turquesa">Políticas de Privacidad</a>
+          <span>⬢</span>
+          <a href="#" class="text-muted hover-turquesa">Seguridad de Datos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cartDrawerBackdrop" class="cart-drawer-backdrop" onclick="closeCartDrawer()"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Carrito de compras">
+
+    <div class="drawer-header">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-cart3 fs-4" style="color: var(--zt-turquesa);"></i>
+        <h4 class="m-0 text-white fw-bold" style="font-size: 1.15rem; font-family: var(--zt-font-heading);">Tu Carrito</h4>
+      </div>
+      <button type="button" class="btn btn-sm text-white fs-4 p-0" onclick="closeCartDrawer()" aria-label="Cerrar carrito">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="offcanvas-cart-items">
+
+    </div>
+
+    <div class="drawer-footer">
+      <div class="d-flex justify-content-between mb-2 small text-muted">
+        <span>Subtotal productos:</span>
+        <strong id="offcanvas-cart-subtotal" class="text-dark">$379 USD</strong>
+      </div>
+      <div class="d-flex justify-content-between mb-3 small text-muted">
+        <span>Envío a domicilio:</span>
+        <strong class="text-success fw-bold">¡GRATIS!</strong>
+      </div>
+      <div class="d-flex justify-content-between mb-3 fs-5 fw-bold" style="font-family: var(--zt-font-heading);">
+        <span>Total estimado:</span>
+        <span id="offcanvas-cart-total" style="color: var(--zt-turquesa-hover);">$379 USD</span>
+      </div>
+      <button class="btn-turquesa w-100 py-3 mb-2" onclick="showToast('Pedido en Proceso', 'Redirigiendo a pasarela segura de pago...', 'success')">
+        <i class="bi bi-lock-fill"></i> Proceder al Pago Seguro
+      </button>
+      <button class="btn btn-sm btn-outline-negro w-100" onclick="closeCartDrawer()">
+        Continuar Comprando
+      </button>
+    </div>
+
+  </aside>
+
+  <div id="quickViewBackdrop" class="tech-modal-backdrop" onclick="closeQuickView()">
+    <div class="tech-modal-box" onclick="event.stopPropagation()">
+      <div class="modal-header-tech">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-cpu-fill" style="color: var(--zt-turquesa);"></i>
+          <h5 class="m-0 text-white fw-bold" style="font-family: var(--zt-font-heading);">Detalles del Producto</h5>
+        </div>
+        <button type="button" class="btn text-white fs-4 p-0" onclick="closeQuickView()" aria-label="Cerrar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="modal-body-tech" id="quickViewContent">
+
+      </div>
+    </div>
+  </div>
+
+  <div id="toastPlacementContainer" class="toast-container-custom"></div>
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    function setCategoryFilter(category) {
+      AppState.activeFilter = category;
+      const searchSelect = document.getElementById('search-category-select');
+      if (searchSelect) searchSelect.value = category;
+
+      document.querySelectorAll('.product-tab-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      renderProducts();
+      const target = document.getElementById('productos');
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
+
